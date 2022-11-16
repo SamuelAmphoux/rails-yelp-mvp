@@ -1,0 +1,16 @@
+<h1>Restaurants#new</h1>
+<p>Find me in app/views/restaurants/new.html.erb</p>
+
+<%= simple_form_for(@restaurant) do |f| %>
+
+  <%= f.input :name %>
+
+  <%= f.input :address %>
+
+  <%= f.input :phone_number %>
+
+  <%= f.input :category, collection: ["chinese", "italian", "japanese", "french", "belgian"] %>
+
+  <%= f.button :submit, class: "btn-primary" %>
+  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
+<% end %>
